@@ -35,63 +35,9 @@
             <button class="filter-btn" data-filter="relojes">Relojes</button>
         </div>
 
-        <!-- Store Grid -->
+        <!-- Store Grid: generado dinámicamente por main.js desde data/products.json -->
         <div class="product-grid" id="store-grid">
-            
-            <!-- Anillo 1 -->
-            <div class="product-card" data-category="anillos">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1605100804763-247f66121511?auto=format&fit=crop&w=800&q=80" alt="Anillo Solitario">
-                </div>
-                <h3 class="product-title">Anillo Solitario Élite</h3>
-                <p class="product-price">$1,200.00</p>
-            </div>
-
-            <!-- Anillo 2 -->
-            <div class="product-card" data-category="anillos">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1599643477874-c65166f4d2f8?auto=format&fit=crop&w=800&q=80" alt="Anillo de Oro">
-                </div>
-                <h3 class="product-title">Anillo Corona Imperial</h3>
-                <p class="product-price">$980.00</p>
-            </div>
-
-            <!-- Cadena 1 -->
-            <div class="product-card" data-category="cadenas">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1599643478514-4fbab210bc95?auto=format&fit=crop&w=800&q=80" alt="Collar Oro 18k">
-                </div>
-                <h3 class="product-title">Collar Lágrima Dorada</h3>
-                <p class="product-price">$850.00</p>
-            </div>
-
-            <!-- Cadena 2 -->
-            <div class="product-card" data-category="cadenas">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1599643477874-c65166f4d2f8?auto=format&fit=crop&w=800&q=80" alt="Cadena Eslabón Cubano">
-                </div>
-                <h3 class="product-title">Cadena Cubana 18k</h3>
-                <p class="product-price">$1,400.00</p>
-            </div>
-
-            <!-- Pulsera 1 -->
-            <div class="product-card" data-category="pulseras">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80" alt="Pulsera de Oro">
-                </div>
-                <h3 class="product-title">Pulsera Infinito</h3>
-                <p class="product-price">$950.00</p>
-            </div>
-
-            <!-- Reloj 1 -->
-            <div class="product-card" data-category="relojes">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80" alt="Reloj de Lujo">
-                </div>
-                <h3 class="product-title">Reloj Classic Gold</h3>
-                <p class="product-price">$2,500.00</p>
-            </div>
-
+            <p class="grid-loading">Cargando colección...</p>
         </div>
     </section>
 
@@ -102,6 +48,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/ImageService.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

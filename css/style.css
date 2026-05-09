@@ -447,3 +447,99 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ─────────────────────────────────────────────
+   Optimización Móvil — Mobile First Enhancements
+   ───────────────────────────────────────────── */
+
+/* Estado de carga del grid */
+.grid-loading {
+  text-align: center;
+  color: var(--color-text-light);
+  padding: 3rem 0;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  grid-column: 1 / -1;
+}
+
+/* Grilla de productos — ajuste responsivo */
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .product-title {
+    font-size: 1rem;
+  }
+
+  .product-price {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Filtros de tienda — zonas táctiles más grandes en móvil */
+@media (max-width: 768px) {
+  .store-filters {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .filter-btn {
+    padding: 0.75rem 1.25rem;  /* Mínimo ~44px de alto para touch */
+    font-size: 0.9rem;
+    min-height: 44px;
+  }
+
+  /* Hero: reducir tamaño del título en móvil */
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  /* Secciones: reducir padding vertical */
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Contenedor: reducir márgenes laterales en pantalla muy pequeña */
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  /* Botones: asegurar zona táctil mínima */
+  .btn {
+    padding: 0.9rem 2rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Footer: centrar en móvil */
+  .footer-content {
+    gap: 2rem;
+  }
+
+  /* Menú móvil: ligeramente más grande los links para touch */
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 1rem 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}

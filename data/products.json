@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "title": "Anillo Solitario Élite",
+    "price": "$1,200.00",
+    "category": "anillos",
+    "featured": true,
+    "image": "anillo-solitario.jpg",
+    "alt": "Anillo Solitario con Diamante"
+  },
+  {
+    "id": "2",
+    "title": "Anillo Corona Imperial",
+    "price": "$980.00",
+    "category": "anillos",
+    "featured": false,
+    "image": "anillo-corona.jpg",
+    "alt": "Anillo Corona Imperial de Oro"
+  },
+  {
+    "id": "3",
+    "title": "Collar Lágrima Dorada",
+    "price": "$850.00",
+    "category": "cadenas",
+    "featured": true,
+    "image": "collar-lagrima.jpg",
+    "alt": "Collar Lágrima Dorada 18k"
+  },
+  {
+    "id": "4",
+    "title": "Cadena Cubana 18k",
+    "price": "$1,400.00",
+    "category": "cadenas",
+    "featured": false,
+    "image": "cadena-cubana.jpg",
+    "alt": "Cadena Cubana de Oro 18k"
+  },
+  {
+    "id": "5",
+    "title": "Pulsera Infinito",
+    "price": "$950.00",
+    "category": "pulseras",
+    "featured": true,
+    "image": "pulsera-infinito.jpg",
+    "alt": "Pulsera Infinito de Oro y Diamantes"
+  },
+  {
+    "id": "6",
+    "title": "Pulsera Esclava Diamantes",
+    "price": "$1,100.00",
+    "category": "pulseras",
+    "featured": false,
+    "image": "pulsera-esclava.jpg",
+    "alt": "Pulsera Esclava con Diamantes"
+  },
+  {
+    "id": "7",
+    "title": "Reloj Classic Gold",
+    "price": "$2,500.00",
+    "category": "relojes",
+    "featured": true,
+    "image": "reloj-classic.jpg",
+    "alt": "Reloj Classic Gold de Lujo"
+  },
+  {
+    "id": "8",
+    "title": "Reloj Royal Automático",
+    "price": "$3,200.00",
+    "category": "relojes",
+    "featured": false,
+    "image": "reloj-royal.jpg",
+    "alt": "Reloj Royal Automático"
+  }
+]
