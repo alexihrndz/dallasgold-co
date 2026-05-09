@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda | Dallas Gold Colombia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">Dallas<span>Gold</span></a>
+            <button class="menu-btn" aria-label="Abrir menú">☰</button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">Nosotros</a>
+                <a href="store.html" class="active">Tienda</a>
+                <a href="contact.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <div style="height: 80px;"></div> <!-- Spacer for fixed header -->
+
+    <section class="section container">
+        <h1 class="section-title">Nuestra Colección</h1>
+        
+        <!-- Category Filters -->
+        <div class="store-filters">
+            <button class="filter-btn active" data-filter="todos">Todos</button>
+            <button class="filter-btn" data-filter="anillos">Anillos</button>
+            <button class="filter-btn" data-filter="cadenas">Cadenas</button>
+            <button class="filter-btn" data-filter="pulseras">Pulseras</button>
+            <button class="filter-btn" data-filter="relojes">Relojes</button>
+        </div>
+
+        <!-- Store Grid -->
+        <div class="product-grid" id="store-grid">
+            
+            <!-- Anillo 1 -->
+            <div class="product-card" data-category="anillos">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f66121511?auto=format&fit=crop&w=800&q=80" alt="Anillo Solitario">
+                </div>
+                <h3 class="product-title">Anillo Solitario Élite</h3>
+                <p class="product-price">$1,200.00</p>
+            </div>
+
+            <!-- Anillo 2 -->
+            <div class="product-card" data-category="anillos">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1599643477874-c65166f4d2f8?auto=format&fit=crop&w=800&q=80" alt="Anillo de Oro">
+                </div>
+                <h3 class="product-title">Anillo Corona Imperial</h3>
+                <p class="product-price">$980.00</p>
+            </div>
+
+            <!-- Cadena 1 -->
+            <div class="product-card" data-category="cadenas">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1599643478514-4fbab210bc95?auto=format&fit=crop&w=800&q=80" alt="Collar Oro 18k">
+                </div>
+                <h3 class="product-title">Collar Lágrima Dorada</h3>
+                <p class="product-price">$850.00</p>
+            </div>
+
+            <!-- Cadena 2 -->
+            <div class="product-card" data-category="cadenas">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1599643477874-c65166f4d2f8?auto=format&fit=crop&w=800&q=80" alt="Cadena Eslabón Cubano">
+                </div>
+                <h3 class="product-title">Cadena Cubana 18k</h3>
+                <p class="product-price">$1,400.00</p>
+            </div>
+
+            <!-- Pulsera 1 -->
+            <div class="product-card" data-category="pulseras">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80" alt="Pulsera de Oro">
+                </div>
+                <h3 class="product-title">Pulsera Infinito</h3>
+                <p class="product-price">$950.00</p>
+            </div>
+
+            <!-- Reloj 1 -->
+            <div class="product-card" data-category="relojes">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80" alt="Reloj de Lujo">
+                </div>
+                <h3 class="product-title">Reloj Classic Gold</h3>
+                <p class="product-price">$2,500.00</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dallas Gold Colombia. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
