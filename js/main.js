@@ -114,10 +114,96 @@ function initMobileMenu() {
 }
 
 // ─────────────────────────────────────────────
+//  Cargar información de contacto desde JSON
+// ─────────────────────────────────────────────
+// ─────────────────────────────────────────────
+//  Cargar información de contacto desde JSON
+// ─────────────────────────────────────────────
+async function loadContactInfo() {
+  try {
+    const res = await fetch('data/contact.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+
+    // Procesar WhatsApp URL y texto si se da solo el número plano
+    const rawWa = (data.whatsapp || '').toString().replace(/\D/g, '');
+    const waUrl = data.whatsappUrl || (rawWa ? `https://wa.me/57${rawWa}` : '#');
+    const waDisplay = data.whatsappDisplay || (rawWa ? `+57 ${rawWa.replace(/(\d{3})(\d{3})(\d{4})/, '$1 $2 $3')}` : data.whatsapp);
+
+    // Procesar Horarios
+    let hoursHtml = '';
+    if (typeof data.businessHours === 'string') {
+      hoursHtml = data.businessHours;
+    } else if (Array.isArray(data.businessHours)) {
+      hoursHtml = data.businessHours.join('<br>');
+    } else if (data.businessHours && typeof data.businessHours === 'object') {
+      hoursHtml = Object.values(data.businessHours).filter(Boolean).join('<br>');
+    }
+
+    // Procesar Mapa
+    let mapUrl = '';
+    if (data.map) {
+      if (typeof data.map === 'string') {
+        mapUrl = data.map;
+      } else if (data.map.embedUrl) {
+        mapUrl = data.map.embedUrl;
+      } else if (data.map.locationName) {
+        mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(data.map.locationName)}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
+      }
+    }
+
+    // Actualizar página de contacto (contact.html)
+    const addressEl = document.getElementById('contact-address');
+    if (addressEl && data.address) addressEl.textContent = data.address;
+
+    const whatsappEl = document.getElementById('contact-whatsapp');
+    if (whatsappEl) {
+      if (waDisplay) whatsappEl.textContent = waDisplay;
+      if (waUrl) whatsappEl.href = waUrl;
+    }
+
+    const emailEl = document.getElementById('contact-email');
+    if (emailEl && data.email) {
+      emailEl.textContent = data.email;
+      emailEl.href = `mailto:${data.email}`;
+    }
+
+    const hoursEl = document.getElementById('contact-hours');
+    if (hoursEl && hoursHtml) hoursEl.innerHTML = hoursHtml;
+
+    const mapEl = document.getElementById('contact-map');
+    if (mapEl && mapUrl) mapEl.src = mapUrl;
+
+    // Actualizar Footer (index.html u otros)
+    const footerAddress = document.getElementById('footer-address');
+    if (footerAddress && data.address) footerAddress.textContent = data.address;
+
+    const footerEmail = document.getElementById('footer-email');
+    if (footerEmail && data.email) {
+      footerEmail.textContent = data.email;
+      footerEmail.href = `mailto:${data.email}`;
+    }
+
+    const footerWa = document.getElementById('footer-whatsapp');
+    if (footerWa) {
+      if (waDisplay) footerWa.textContent = waDisplay;
+      if (waUrl) footerWa.href = waUrl;
+    }
+
+    const socialWa = document.getElementById('social-wa-link');
+    if (socialWa && waUrl) socialWa.href = waUrl;
+
+  } catch (err) {
+    console.error('[Dallas Gold] Error cargando datos de contacto:', err);
+  }
+}
+
+// ─────────────────────────────────────────────
 //  Init principal
 // ─────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
+  loadContactInfo();
 
   // Tienda: cargar todos los productos
   if (document.getElementById('store-grid')) {

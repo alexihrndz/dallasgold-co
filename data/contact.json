@@ -1,0 +1,19 @@
+{
+  "storeName": "Dallas Gold Colombia",
+  "address": "Medellín: Carrera 43A, Calle 7 Sur - 170 CC Santa Fe Medellín, local 1009",
+  "city": "Medellín, Colombia",
+  "whatsapp": "3052354068",
+  "whatsappDisplay": "+57 305 235 4068",
+  "whatsappUrl": "https://wa.me/573052354068",
+  "email": "dallasgoldco@gmail.com",
+  "businessHours": {
+    "weekdays": "Lunes a Sábado: 10:00 AM - 8:00 PM",
+    "weekends": "Domingos y Festivos: 11:00 AM - 6:00 PM"
+  },
+  "map": {
+    "locationName": "Centro Comercial El Tesoro Medellín",
+    "embedUrl": "https://maps.google.com/maps?q=Centro+Comercial+El+Tesoro+Medellin&t=&z=16&ie=UTF8&iwloc=&output=embed",
+    "latitude": 6.197415,
+    "longitude": -75.560882
+  }
+}
