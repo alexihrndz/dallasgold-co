@@ -25,7 +25,7 @@ const IMAGE_CONFIG = {
    * Las imágenes deben estar en esta ruta dentro del proyecto.
    */
   local: {
-    basePath: 'images/productos/'
+    basePath: 'images/products/'
   },
 
   /**
